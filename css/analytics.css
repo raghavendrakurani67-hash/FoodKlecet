@@ -1,0 +1,94 @@
+
+.analytics-wrap {
+    min-height: 100vh;
+    padding: 55px 0 80px;
+    background: linear-gradient(135deg, #fff1e5, #fff7f0);
+}
+
+.analytics-heading {
+    margin-bottom: 30px;
+}
+
+.analytics-heading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.analytics-heading p,
+.chart-card > p {
+    color: #777;
+}
+
+.analytics-card,
+.chart-card {
+    background: #fff;
+    border: 1px solid #f0e4dd;
+    border-radius: 18px;
+    padding: 24px;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(80, 45, 25, 0.06);
+}
+
+.analytics-card p {
+    color: #777;
+    font-size: 14px;
+    margin: 12px 0 5px;
+}
+
+.analytics-card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.analytics-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: #fff0e8;
+    color: #ff6b35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.chart-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.chart-area {
+    position: relative;
+    height: 330px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table thead th {
+    background: #fff4ec;
+    color: #493326;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 14px 10px;
+}
+
+@media (max-width: 576px) {
+    .analytics-wrap {
+        padding: 35px 0 55px;
+    }
+
+    .analytics-card,
+    .chart-card {
+        padding: 18px;
+    }
+
+    .chart-area {
+        height: 280px;
+    }
+}

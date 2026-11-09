@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         element.className = "auth-message " + type;
     }
 
-    // Password visibility toggle
+    // PASSWORD VISIBILITY TOGGLE
     const togglePassword = document.getElementById("togglePassword");
 
     if (togglePassword) {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // REGISTRATION - MySQL
+    // REGISTRATION - MYSQL
     if (registerForm) {
         registerForm.addEventListener("submit", async function (event) {
             event.preventDefault();
@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             try {
                 const response = await fetch("api/register.php", {
                     method: "POST",
+                    credentials: "same-origin",
                     headers: {
                         "Content-Type": "application/json"
                     },
@@ -94,14 +95,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     })
                 });
 
-                const result = await response.json();
+                const rawResponse = await response.text();
+                console.log("Registration HTTP status:", response.status);
+                console.log("Registration server response:", rawResponse);
+
+                let result;
+
+                try {
+                    result = JSON.parse(rawResponse);
+                } catch (error) {
+                    throw new Error("Invalid server response. Check Console.");
+                }
 
                 if (!response.ok || !result.success) {
                     showMessage(messageBox, result.message || "Registration failed.", "error");
                     return;
                 }
 
-                showMessage(messageBox, "Account created successfully! Redirecting to login...", "success");
+                showMessage(
+                    messageBox,
+                    "Account created successfully! Redirecting to login...",
+                    "success"
+                );
 
                 registerForm.reset();
 
@@ -111,7 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             } catch (error) {
                 console.error("Registration error:", error);
-                showMessage(messageBox, "Unable to connect to the server. Please try again.", "error");
+                showMessage(messageBox, error.message, "error");
+
             } finally {
                 submitButton.disabled = false;
                 submitButton.innerHTML = 'Create Account <i class="bi bi-arrow-right"></i>';
@@ -119,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // LOGIN - MySQL
+    // LOGIN - MYSQL
     if (loginForm) {
         loginForm.addEventListener("submit", async function (event) {
             event.preventDefault();
@@ -141,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             try {
                 const response = await fetch("api/login.php", {
                     method: "POST",
+                    credentials: "same-origin",
                     headers: {
                         "Content-Type": "application/json"
                     },
@@ -150,10 +167,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     })
                 });
 
-                const result = await response.json();
+                const rawResponse = await response.text();
+
+                console.log("Login HTTP status:", response.status);
+                console.log("Login server response:", rawResponse);
+
+                let result;
+
+                try {
+                    result = JSON.parse(rawResponse);
+                } catch (error) {
+                    throw new Error("Invalid server response. Check Console.");
+                }
 
                 if (!response.ok || !result.success) {
-                    showMessage(messageBox, result.message || "Login failed.", "error");
+                    showMessage(
+                        messageBox,
+                        result.message || "Login failed.",
+                        "error"
+                    );
                     return;
                 }
 
@@ -162,7 +194,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     JSON.stringify(result.user)
                 );
 
-                showMessage(messageBox, "Login successful! Redirecting...", "success");
+                showMessage(
+                    messageBox,
+                    "Login successful! Redirecting...",
+                    "success"
+                );
 
                 setTimeout(function () {
                     window.location.href = "index.html";
@@ -170,7 +206,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             } catch (error) {
                 console.error("Login error:", error);
-                showMessage(messageBox, "Unable to connect to the server. Please try again.", "error");
+                showMessage(messageBox, error.message, "error");
+
             } finally {
                 submitButton.disabled = false;
                 submitButton.textContent = "Login";
