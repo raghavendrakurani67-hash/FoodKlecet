@@ -1,0 +1,1180 @@
+
+/* =========================================
+   FOODKLECT - MAIN STYLESHEET
+========================================= */
+
+/* ---------- ROOT VARIABLES ---------- */
+
+:root {
+    --primary: #ff6b35;
+    --primary-dark: #ed5420;
+    --secondary: #fff2eb;
+    --dark: #252525;
+    --text: #666666;
+    --light: #ffffff;
+    --background: #fffdfb;
+    --border: #eeeeee;
+    --success: #20a464;
+
+    --font-main: 'DM Sans', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+
+    --radius: 16px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    --transition: all 0.3s ease;
+}
+
+
+/* ---------- GLOBAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark);
+    background: var(--background);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    color: var(--dark);
+    letter-spacing: -1px;
+}
+
+.brand-orange {
+    color: var(--primary);
+}
+
+.brand-dot {
+    color: var(--primary);
+}
+
+.navbar-nav .nav-link {
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+.cart-link {
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.cart-link:hover {
+    color: var(--primary);
+}
+
+.cart-count {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    background: var(--primary);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.btn-orange {
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn-orange:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-dark:hover {
+    transform: translateY(-2px);
+}
+
+.admin-login-card {
+    background: white;
+    border: 1px solid #f1e4dc;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    padding: 32px 24px;
+    height: 100%;
+}
+
+.admin-login-card h3 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.admin-login-card p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+
+/* ---------- HERO SECTION ---------- */
+
+.home-page {
+    background: #fffaf5;
+}
+
+.home-page .hero-section {
+    position: relative;
+    padding: 85px 0 100px;
+    background:
+        radial-gradient(ellipse at 86% 12%, rgba(255, 119, 62, 0.34) 0, transparent 31%),
+        radial-gradient(ellipse at 62% 88%, rgba(255, 192, 93, 0.22) 0, transparent 31%),
+        linear-gradient(125deg, #fff0e3 0%, #fff8f0 48%, #fffdf9 100%);
+    overflow: hidden;
+}
+
+.home-page .hero-section::before {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(176, 88, 46, 0.15) 1px, transparent 1px);
+    background-size: 25px 25px;
+    content: "";
+    opacity: 0.28;
+    pointer-events: none;
+}
+
+.home-page .hero-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    background: #fff0e9;
+    padding: 9px 16px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 5.5vw, 68px);
+    line-height: 1.17;
+    font-weight: 800;
+    letter-spacing: -2.5px;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content > p {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 480px;
+    margin-top: 22px;
+}
+
+.hero-stats {
+    border-top: 1px solid #eee2dc;
+    padding-top: 25px;
+    max-width: 430px;
+}
+
+.hero-stats h4 {
+    font-family: var(--font-heading);
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+
+.hero-stats small {
+    color: var(--text);
+    font-size: 12px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    padding: 15px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.13);
+}
+
+.floating-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 13px;
+}
+
+.floating-card small {
+    display: block;
+    color: var(--text);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.floating-icon {
+    font-size: 28px;
+}
+
+.floating-card-top {
+    top: 55px;
+    left: -15px;
+}
+
+.floating-card-bottom {
+    bottom: 55px;
+    right: -15px;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* ---------- COMMON SECTION STYLES ---------- */
+
+.section-padding {
+    padding: 85px 0;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(27px, 3vw, 36px);
+    font-weight: 800;
+    margin: 12px 0 10px;
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+/* ---------- CATEGORY SECTION ---------- */
+
+.home-page .category-section {
+    background:
+        radial-gradient(ellipse at 7% 75%, rgba(255, 183, 109, 0.22), transparent 28%),
+        linear-gradient(135deg, #fff8ef 0%, #fff0e7 52%, #fffaf5 100%);
+}
+
+.category-card {
+    display: block;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-align: center;
+    padding: 30px 15px;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    border-color: #ffd2bf;
+    box-shadow: var(--shadow);
+}
+
+.category-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 17px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    transition: var(--transition);
+}
+
+.category-card:hover .category-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.category-card h5 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.category-card p {
+    color: var(--text);
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+
+/* ---------- POPULAR FOOD SECTION ---------- */
+
+.home-page .popular-section {
+    background:
+        radial-gradient(ellipse at 92% 10%, rgba(255, 174, 103, 0.2), transparent 28%),
+        linear-gradient(135deg, #fff0e6 0%, #fff8f2 54%, #fff3e9 100%);
+}
+
+.view-all-link {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.view-all-link:hover {
+    color: var(--primary-dark);
+    transform: translateX(4px);
+}
+
+.food-card {
+    height: 100%;
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid #f0ece9;
+    transition: var(--transition);
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.food-image-wrapper {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+}
+
+.food-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-image-wrapper img {
+    transform: scale(1.07);
+}
+
+.food-tag {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: var(--primary);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.favourite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #555;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.favourite-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.food-card-body {
+    padding: 19px;
+}
+
+.food-category {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.food-card-body h5 {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.food-card-body p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.6;
+    min-height: 39px;
+}
+
+.food-card-body .food-price {
+    color: var(--primary);
+    font-size: 18px;
+    margin: 0;
+}
+
+.add-cart-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.add-cart-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.08);
+}
+
+
+/* ---------- CANTEEN SECTION ---------- */
+
+.home-page .canteens-section {
+    background:
+        radial-gradient(ellipse at 5% 12%, rgba(255, 198, 112, 0.22), transparent 27%),
+        linear-gradient(145deg, #fffaf3 0%, #fff0e6 56%, #fff8f2 100%);
+}
+
+.canteen-card {
+    height: 100%;
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.canteen-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.canteen-card > img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.canteen-card:hover > img {
+    transform: scale(1.04);
+}
+
+.canteen-info {
+    padding: 22px;
+}
+
+.canteen-info h5 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.canteen-status {
+    color: var(--success);
+    background: #e9f8f0;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    height: fit-content;
+}
+
+.canteen-info p {
+    color: var(--text);
+    font-size: 12px;
+}
+
+.canteen-info p i {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+.canteen-link {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 7px;
+    transition: var(--transition);
+}
+
+.canteen-link:hover {
+    color: var(--primary-dark);
+    transform: translateX(4px);
+}
+
+
+/* ---------- HOW IT WORKS ---------- */
+
+.home-page .how-section {
+    background:
+        radial-gradient(ellipse at 91% 40%, rgba(255, 171, 102, 0.2), transparent 28%),
+        linear-gradient(135deg, #fff1e7 0%, #fff9f3 60%, #fff4ea 100%);
+}
+
+.how-card {
+    height: 100%;
+    background: white;
+    padding: 35px 25px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.how-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.how-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 22px;
+    border-radius: 22px;
+    background: var(--secondary);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.how-card h5 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.how-card p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* ---------- CALL TO ACTION ---------- */
+
+.home-page .admin-promo-section {
+    background: linear-gradient(135deg, #fff7ee 0%, #ffeadd 50%, #fff4e9 100%);
+}
+
+.cta-section {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 0;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255, 209, 147, 0.3), transparent 25%),
+        radial-gradient(circle at 90% 82%, rgba(193, 57, 21, 0.22), transparent 28%),
+        linear-gradient(120deg, #f25728, #ff7b3d 58%, #ff9854);
+}
+
+.cta-content > span {
+    color: #ffe3d7;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.cta-content h2 {
+    font-family: var(--font-heading);
+    color: white;
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 800;
+    margin: 13px 0;
+}
+
+.cta-content p {
+    color: #fff0e9;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.cta-content .btn {
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.cta-content .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    background: #202020;
+    color: white;
+    padding: 65px 0 20px;
+}
+
+.footer-brand {
+    font-family: var(--font-heading);
+    font-size: 27px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -1px;
+}
+
+.footer-brand span {
+    color: var(--primary);
+}
+
+.footer-description {
+    max-width: 330px;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+.footer h6 {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    color: #aaa;
+    font-size: 12px;
+    margin-bottom: 13px;
+}
+
+.footer ul li a {
+    color: #aaa;
+    transition: var(--transition);
+}
+
+.footer ul li a:hover {
+    color: var(--primary);
+    padding-left: 4px;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact i {
+    color: var(--primary);
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer hr {
+    border-color: #444;
+    margin: 40px 0 20px;
+}
+
+.footer-bottom {
+    color: #888;
+    font-size: 11px;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+}
+
+.footer-bottom i {
+    color: var(--primary);
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        padding: 20px 0 10px;
+    }
+
+    .navbar-collapse > .d-flex {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px !important;
+    }
+
+    .navbar-collapse > .d-flex .cart-link {
+        display: inline-flex;
+        min-width: 44px;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-collapse > .d-flex .btn {
+        flex: 0 1 auto;
+        min-height: 44px;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .navbar-nav {
+        gap: 5px !important;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 9px 0;
+    }
+
+    .hero-section {
+        padding: 65px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-content .d-flex {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        height: 330px;
+        border-radius: 25px;
+    }
+
+    .floating-card {
+        padding: 11px 13px;
+    }
+
+    .floating-card strong {
+        font-size: 11px;
+    }
+
+    .floating-card small {
+        font-size: 9px;
+    }
+
+    .floating-icon {
+        font-size: 23px;
+    }
+
+    .floating-card-top {
+        left: -5px;
+    }
+
+    .floating-card-bottom {
+        right: -5px;
+    }
+
+    .food-image-wrapper {
+        height: 210px;
+    }
+
+    .canteen-card > img {
+        height: 200px;
+    }
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .footer {
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .favourite-btn,
+    .add-cart-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-label {
+        font-size: 9px;
+    }
+
+    .hero-stats {
+        gap: 22px !important;
+    }
+
+    .hero-stats h4 {
+        font-size: 16px;
+    }
+
+    .hero-stats small {
+        font-size: 10px;
+    }
+
+    .hero-image {
+        height: 270px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .category-card {
+        padding: 23px 10px;
+    }
+
+    .category-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 29px;
+    }
+
+    .category-card h5 {
+        font-size: 14px;
+    }
+
+    .category-card p {
+        font-size: 10px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        justify-content: center !important;
+    }
+
+    .cta-content h2 {
+        font-size: 30px;
+    }
+
+    .navbar-collapse > .d-flex .btn {
+        padding-right: 12px !important;
+        padding-left: 12px !important;
+    }
+}
+
+
+/* ---------- ACCESSIBILITY ---------- */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(255, 107, 53, 0.45);
+    outline-offset: 3px;
+}
+
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================
+   FOODKLECT - DARK MODE
+========================================= */
+
+body.dark-mode {
+    --dark: #f1f1f1;
+    --text: #b8b8b8;
+    --light: #1e1e1e;
+    --background: #121212;
+    --border: #333333;
+    --secondary: #30241f;
+
+    background: #121212;
+    color: #f1f1f1;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+    background: #1e1e1e !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .navbar-nav .nav-link,
+body.dark-mode .cart-link {
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar-toggler {
+    background-color: #eeeeee;
+}
+
+/* Hero */
+body.dark-mode.home-page {
+    background: #121212;
+}
+
+body.dark-mode.home-page .hero-section {
+    background: linear-gradient(125deg, #211b18, #181818, #121212);
+}
+
+body.dark-mode .hero-label {
+    background: #38251e;
+}
+
+/* Main sections */
+body.dark-mode.home-page .category-section,
+body.dark-mode.home-page .popular-section,
+body.dark-mode.home-page .canteens-section,
+body.dark-mode.home-page .how-section,
+body.dark-mode.home-page .admin-promo-section {
+    background: #171717;
+    color: #f1f1f1;
+}
+
+/* Cards */
+body.dark-mode .category-card,
+body.dark-mode .food-card,
+body.dark-mode .canteen-card,
+body.dark-mode .how-card,
+body.dark-mode .admin-login-card,
+body.dark-mode .floating-card {
+    background: #242424;
+    color: #f1f1f1;
+    border-color: #383838;
+}
+
+body.dark-mode .category-card p,
+body.dark-mode .food-card-body p,
+body.dark-mode .canteen-info p,
+body.dark-mode .how-card p,
+body.dark-mode .admin-login-card p,
+body.dark-mode .floating-card small {
+    color: #b8b8b8;
+}
+
+/* Card headings */
+body.dark-mode .category-card h5,
+body.dark-mode .food-card-body h5,
+body.dark-mode .canteen-info h5,
+body.dark-mode .how-card h5,
+body.dark-mode .admin-login-card h3 {
+    color: #ffffff;
+}
+
+/* Buttons */
+body.dark-mode .btn-outline-dark {
+    color: #ffffff;
+    border-color: #aaaaaa;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+    background: #ffffff;
+    color: #121212;
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background: #080808;
+}
+
+/* Theme transition */
+body,
+.navbar,
+.category-card,
+.food-card,
+.canteen-card,
+.how-card,
+.admin-login-card,
+.floating-card {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

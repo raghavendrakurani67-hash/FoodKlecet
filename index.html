@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Foodklect - Order your favourite campus food online.">
+    <title>Foodklect | Campus Food Ordering</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="home-page">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <span class="brand-orange">Food</span>klect
+                <span class="brand-dot">.</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Explore Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#canteens">Canteens</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button id="themeToggle" class="btn btn-outline-dark rounded-pill px-3">
+                        <i class="bi bi-moon-stars-fill"></i>
+                        <span>Dark Mode</span>
+                    </button>
+
+                    <a href="cart.html" class="cart-link position-relative">
+                        <i class="bi bi-bag fs-5"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+
+                    <a href="login.html" class="btn btn-outline-dark rounded-pill px-4">
+                        Login
+                    </a>
+
+                    <a href="admin-login.html" class="btn btn-outline-dark rounded-pill px-4">
+                        Admin Login
+                    </a>
+
+                    <a href="register.html" class="btn btn-orange rounded-pill px-4">
+                        Sign Up
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 hero-content">
+
+                    <span class="hero-label">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                        YOUR CAMPUS FOOD DESTINATION
+                    </span>
+
+                    <h1>
+                        Your campus.<br>
+                        Your cravings.<br>
+                        <span>One platform.</span>
+                    </h1>
+
+                    <p>
+                        Hungry between classes? Discover delicious food,
+                        order from your favourite campus canteens and enjoy
+                        hassle-free pickup.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="menu.html" class="btn btn-orange btn-lg rounded-pill px-4">
+                            Explore Food <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                        <a href="#how-it-works" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                            How It Works
+                        </a>
+                    </div>
+
+                    <div class="hero-stats d-flex gap-4 mt-5">
+                        <div>
+                            <h4>Fresh</h4>
+                            <small>Every Order</small>
+                        </div>
+
+                        <div>
+                            <h4>Quick</h4>
+                            <small>Campus Pickup</small>
+                        </div>
+
+                        <div>
+                            <h4>Easy</h4>
+                            <small>Online Ordering</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85"
+                            alt="Delicious freshly prepared food" class="hero-image">
+
+                        <div class="floating-card floating-card-top">
+                            <span class="floating-icon">🍕</span>
+                            <div>
+                                <strong>Fresh & Delicious</strong>
+                                <small>Made for your cravings</small>
+                            </div>
+                        </div>
+
+                        <div class="floating-card floating-card-bottom">
+                            <span class="floating-icon">⚡</span>
+                            <div>
+                                <strong>Quick Pickup</strong>
+                                <small>Less waiting, more eating</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Categories -->
+    <section class="section-padding category-section">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-label">WHAT ARE YOU CRAVING?</span>
+                <h2>Explore Categories</h2>
+                <p>Something delicious for every mood.</p>
+            </div>
+
+            <div class="row g-4 mt-3">
+
+                <div class="col-6 col-md-3">
+                    <a href="menu.html?category=snacks" class="category-card">
+                        <div class="category-icon">🍔</div>
+                        <h5>Snacks</h5>
+                        <p>Burgers, fries & more</p>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <a href="menu.html?category=meals" class="category-card">
+                        <div class="category-icon">🍛</div>
+                        <h5>Meals</h5>
+                        <p>Delicious full meals</p>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <a href="menu.html?category=beverages" class="category-card">
+                        <div class="category-icon">🥤</div>
+                        <h5>Beverages</h5>
+                        <p>Cool drinks & shakes</p>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <a href="menu.html?category=desserts" class="category-card">
+                        <div class="category-icon">🍰</div>
+                        <h5>Desserts</h5>
+                        <p>Sweet treats & more</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Popular Food -->
+    <section class="section-padding popular-section">
+        <div class="container">
+
+            <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
+                <div class="section-heading mb-0">
+                    <span class="section-label">STUDENT FAVOURITES</span>
+                    <h2>Popular This Week</h2>
+                    <p>Check out what everyone is loving.</p>
+                </div>
+
+                <a href="menu.html" class="view-all-link">
+                    View Full Menu <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="row g-4 mt-3" id="popularFoodGrid">
+
+                <!-- Food Card 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="food-card">
+
+                        <div class="food-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+                                alt="Cheese burger">
+                            <span class="food-tag">Popular</span>
+                            <button class="favourite-btn" aria-label="Add burger to favourites">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="food-card-body">
+                            <div class="food-category">SNACKS</div>
+                            <h5>Classic Cheese Burger</h5>
+                            <p>Juicy burger with cheese and fresh vegetables.</p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="food-price">₹99</h5>
+                                <button class="add-cart-btn" aria-label="Add burger to cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Food Card 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="food-card">
+
+                        <div class="food-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=600&q=80"
+                                alt="Delicious pizza">
+                            <span class="food-tag">Bestseller</span>
+                            <button class="favourite-btn" aria-label="Add pizza to favourites">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="food-card-body">
+                            <div class="food-category">SNACKS</div>
+                            <h5>Cheese Pizza</h5>
+                            <p>Freshly baked pizza loaded with melted cheese.</p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="food-price">₹149</h5>
+                                <button class="add-cart-btn" aria-label="Add pizza to cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Food Card 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="food-card">
+
+                        <div class="food-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
+                                alt="Delicious noodles">
+                            <button class="favourite-btn" aria-label="Add noodles to favourites">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="food-card-body">
+                            <div class="food-category">MEALS</div>
+                            <h5>Veg Noodles</h5>
+                            <p>Hot and tasty noodles with fresh vegetables.</p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="food-price">₹89</h5>
+                                <button class="add-cart-btn" aria-label="Add noodles to cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Food Card 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="food-card">
+
+                        <div class="food-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
+                                alt="Chocolate milkshake">
+                            <span class="food-tag">Trending</span>
+                            <button class="favourite-btn" aria-label="Add milkshake to favourites">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="food-card-body">
+                            <div class="food-category">BEVERAGES</div>
+                            <h5>Chocolate Shake</h5>
+                            <p>Rich and creamy chocolate milkshake.</p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="food-price">₹79</h5>
+                                <button class="add-cart-btn" aria-label="Add shake to cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Canteens -->
+    <section class="section-padding canteens-section" id="canteens">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-label">YOUR CAMPUS FOOD STOPS</span>
+                <h2>Explore Canteens</h2>
+                <p>Find your favourite food spots around campus.</p>
+            </div>
+
+            <div class="row g-4 mt-3">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="canteen-card">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+                            alt="Campus food cafe">
+
+                        <div class="canteen-info">
+                            <div class="d-flex justify-content-between">
+                                <h5>Main Canteen</h5>
+                                <span class="canteen-status">Open</span>
+                            </div>
+                            <p><i class="bi bi-geo-alt"></i> Main Campus</p>
+                            <a href="menu.html" class="canteen-link">
+                                Explore Menu <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="canteen-card">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80"
+                            alt="Campus coffee shop">
+
+                        <div class="canteen-info">
+                            <div class="d-flex justify-content-between">
+                                <h5>Cafe Corner</h5>
+                                <span class="canteen-status">Open</span>
+                            </div>
+                            <p><i class="bi bi-geo-alt"></i> Academic Block</p>
+                            <a href="menu.html" class="canteen-link">
+                                Explore Menu <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="canteen-card">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                            alt="Campus food restaurant">
+
+                        <div class="canteen-info">
+                            <div class="d-flex justify-content-between">
+                                <h5>Food Court</h5>
+                                <span class="canteen-status">Open</span>
+                            </div>
+                            <p><i class="bi bi-geo-alt"></i> Student Centre</p>
+                            <a href="menu.html" class="canteen-link">
+                                Explore Menu <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- How It Works -->
+    <section class="section-padding how-section" id="how-it-works">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-label">SIMPLE AND EASY</span>
+                <h2>How Foodklect Works</h2>
+                <p>Your favourite food is just a few clicks away.</p>
+            </div>
+
+            <div class="row g-4 mt-4 text-center">
+
+                <div class="col-md-4">
+                    <div class="how-card">
+                        <div class="how-icon">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h5>01. Explore</h5>
+                        <p>Browse canteens and discover delicious food items.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="how-card">
+                        <div class="how-icon">
+                            <i class="bi bi-bag-check"></i>
+                        </div>
+                        <h5>02. Order</h5>
+                        <p>Add your favourite food to the cart and place your order.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="how-card">
+                        <div class="how-icon">
+                            <i class="bi bi-cup-hot"></i>
+                        </div>
+                        <h5>03. Enjoy</h5>
+                        <p>Collect your freshly prepared order from the canteen.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Admin Section -->
+    <section class="section-padding admin-promo-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <div class="section-heading mb-0 text-start">
+                        <span class="section-label">ADMIN ACCESS</span>
+                        <h2>Manage items, update prices and keep your menu fresh.</h2>
+                        <p>Use the admin login area to update food names, categories, pricing and stock status in real
+                            time.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="admin-login-card">
+                        <h3>Admin Portal</h3>
+                        <p>Login to edit menu items, change prices and update availability for your campus canteens.</p>
+                        <a href="admin-login.html" class="btn btn-orange rounded-pill px-4">
+                            Open Admin Login <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center">
+                <span>HUNGRY ALREADY?</span>
+                <h2>Good food. Great mood.</h2>
+                <p>Make your campus food experience easier with Foodklect.</p>
+                <a href="menu.html" class="btn btn-light btn-lg rounded-pill px-5">
+                    Order Now <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <a class="footer-brand" href="index.html">
+                        <span>Food</span>klect.
+                    </a>
+
+                    <p class="footer-description">
+                        Your campus. Your cravings. One platform.
+                        Making campus food ordering simple, quick and convenient.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6>Quick Links</h6>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Explore Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h6>My Account</h6>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="cart.html">My Cart</a></li>
+                        <li><a href="orders.html">My Orders</a></li>
+                        <li><a href="favourites.html">Favourites</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h6>Contact Us</h6>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-envelope"></i> support@foodklect.com</li>
+                        <li><i class="bi bi-geo-alt"></i> Your Campus</li>
+                        <li><i class="bi bi-clock"></i> Campus Food, Anytime</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="d-flex flex-wrap justify-content-between gap-2 footer-bottom">
+                <p>© 2026 Foodklect. All rights reserved.</p>
+                <p>Made with <i class="bi bi-heart-fill"></i> for campus food lovers.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

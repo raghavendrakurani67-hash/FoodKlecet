@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title description">
+  <title id="title">Foodklect demo QR placeholder</title>
+  <desc id="description">A decorative QR-style pattern for the checkout demo. It is not scannable.</desc>
+  <rect width="220" height="220" rx="18" fill="#fff"/>
+  <g fill="#252525">
+    <path d="M16 16h64v64H16zM28 28v40h40V28z" fill-rule="evenodd"/>
+    <path d="M140 16h64v64h-64zM152 28v40h40V28z" fill-rule="evenodd"/>
+    <path d="M16 140h64v64H16zM28 152v40h40v-40z" fill-rule="evenodd"/>
+    <path d="M40 40h16v16H40zM164 40h16v16h-16zM40 164h16v16H40z"/>
+    <path d="M92 16h12v12H92zM112 16h12v12h-12zM92 36h12v12H92zM112 52h12v12h-12zM92 72h12v12H92zM108 88h12v12h-12zM128 92h12v12h-12zM148 92h12v12h-12zM172 92h12v12h-12zM192 92h12v12h-12z"/>
+    <path d="M92 112h12v12H92zM112 112h12v12h-12zM132 112h12v12h-12zM152 112h12v12h-12zM192 112h12v12h-12z"/>
+    <path d="M92 132h12v12H92zM116 132h12v12h-12zM136 132h12v12h-12zM176 132h12v12h-12zM196 132h8v12h-8z"/>
+    <path d="M92 152h12v12H92zM112 152h12v12h-12zM132 152h12v12h-12zM152 152h12v12h-12zM172 152h12v12h-12zM192 152h12v12h-12z"/>
+    <path d="M92 172h12v12H92zM112 172h12v12h-12zM152 172h12v12h-12zM172 172h12v12h-12zM192 172h12v12h-12z"/>
+    <path d="M92 192h12v12H92zM132 192h12v12h-12zM152 192h12v12h-12zM176 192h12v12h-12z"/>
+  </g>
+  <rect x="83" y="83" width="54" height="54" rx="14" fill="#ff6b35" stroke="#fff" stroke-width="6"/>
+  <path d="M98 101h24l-2 17a10 10 0 0 1-20 0zM122 104h5a6 6 0 0 1 0 12h-6" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+</svg>
